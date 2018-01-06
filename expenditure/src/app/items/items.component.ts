@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 import { Items } from './items';
 @Component({
@@ -9,11 +9,17 @@ import { Items } from './items';
 })
 export class ItemsComponent implements OnInit {
   title= 'items component';
+  itemsForm: FormGroup;
 
 
-  constructor() { }
+  constructor( private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.itemsForm = this.fb.group({
+      date:[''],
+      itemName:[''],
+      description:[''],
+    })
   }
 
 
