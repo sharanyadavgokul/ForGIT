@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemsListComponent implements OnInit {
   title= 'items-list component';
+  isVisible: Boolean= true;
   constructor() { }
 
   ngOnInit() {
   }
 
+  toggleItems(){
+    this.isVisible = !this.isVisible;
+  }
 }

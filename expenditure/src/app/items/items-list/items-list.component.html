@@ -5,11 +5,18 @@
     </div>
 </div>-->
 <h3>Items List Table</h3>
-<table class="table">
+<button type="button" class="btn btn-primary" (click)="toggleItems()">Toggle table</button>
+<br>
+<table class="table" *ngIf="isVisible">
     <tr>
         <th>Date</th>
         <th>Items-Name</th>
         <th>Description</th>
     </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td> 
+    </tr>   
 
 </table>    
