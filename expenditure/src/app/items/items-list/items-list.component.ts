@@ -16,4 +16,5 @@ export class ItemsListComponent implements OnInit {
   toggleItems(){
     this.isVisible = !this.isVisible;
   }
+
 }

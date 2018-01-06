@@ -13,10 +13,9 @@
         <th>Items-Name</th>
         <th>Description</th>
     </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td> 
+    <tr *ngFor = "let item of itemsForm">
+        <td>{{item.date}}</td>
+        <td>{{item.itemName}}</td>
+        <td>{{item.description}}</td> 
     </tr>   
-
-</table>    
+</table>
