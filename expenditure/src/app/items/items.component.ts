@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ItemsComponent implements OnInit {
   title= 'items component';
   date: Date;
-  itemName: String= '';
+  data: String= '';
+
 
   constructor() { }
 

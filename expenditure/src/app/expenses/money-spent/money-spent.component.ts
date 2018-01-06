@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoneySpentComponent implements OnInit {
   title='money-spent component';
+  
   constructor() { }
 
   ngOnInit() {
   }
 
+  onAddMember(){
+    
+  }
 }

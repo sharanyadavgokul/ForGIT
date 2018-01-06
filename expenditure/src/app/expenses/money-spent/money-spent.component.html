@@ -1,9 +1,13 @@
 <h5> {{title}} </h5>
 <div class="money">
+    <div class="members">
 <p><b><input type="checkbox" > Gokul 
     <input type="checkbox" > Rajkumar 
     <input type="checkbox" > Naveen 
+    <input type="checkbox">{{member}}
 </b></p>
+    </div>
 <button type="button" class="btn btn-primary"> Submit </button>
+<button type="button" class="btn btn-primary" (click)="onAddMember()">Add member </button>
 </div>
 
