@@ -13,6 +13,7 @@ import { ShouldPayComponent } from './expenses/should-pay/should-pay.component';
 import { ItemsComponent } from './items/items.component';
 import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemsEditComponent } from './items/items-list/items-edit/items-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ItemsEditComponent } from './items/items-list/items-edit/items-edit.com
     ItemsEditComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

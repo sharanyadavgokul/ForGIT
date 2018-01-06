@@ -4,13 +4,17 @@
         <app-items-list></app-items-list>
     </div>
     <div class="col-md-7">
-        <form class="form">
-            Date: <input class="form-control" type="date" >
-            Item Name: <input class="form-control" type="text">
+        <form>
+            <div class="form-group">
+                Date: <input class="form-control" type="date" placeholder="date">
+            </div>
+            <div class="form-group">    
+                Item Name: <input class="form-control" type="text"  placeholder="Item name">
+            </div>    
             <hr>
-            <p>Description
-                <input class="textbox" type="textbox" style="width:100%;height:40px">
-            </p>    
+            <div class="form-group">
+            Description: <input class="textbox" type="textbox" placeholder="Description" style="width:100%;height:40px">
+            </div>    
         </form>    
         <app-money-spent></app-money-spent>
     </div>
