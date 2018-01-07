@@ -16,7 +16,7 @@ import { ItemsEditComponent } from './items/items-list/items-edit/items-edit.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 
-
+ 
 const appRoutes: Routes= [
   {path: '', component:HomeComponent},
   {path:'items', component:ItemsComponent},
