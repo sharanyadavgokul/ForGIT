@@ -19,11 +19,11 @@ export class ItemsComponent implements OnInit {
       date:[''],
       itemName:[''],
       description:[''],
-    });
+    }); 
   }
 
   addItem(){
-    
+
   }
 
 }

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {Routes, RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -14,8 +14,16 @@ import { ItemsComponent } from './items/items.component';
 import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemsEditComponent } from './items/items-list/items-edit/items-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 
+const appRoutes: Routes= [
+  {path: '', component:HomeComponent},
+  {path:'items', component:ItemsComponent},
+  {path:'expenses',component:ExpensesComponent},
+  {path:'shouldpay', component:ShouldPayComponent}
+
+];
 
 @NgModule({
   declarations: [
@@ -30,12 +38,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ItemsComponent,
     ItemsListComponent,
     ItemsEditComponent,
+    HomeComponent,
     
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
