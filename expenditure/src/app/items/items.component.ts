@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 import { Items } from './items';
+import { ItemsListComponent } from './items-list/items-list.component';
+
 @Component({
   selector: 'app-items',
   templateUrl: './items.component.html',
@@ -18,11 +20,13 @@ export class ItemsComponent implements OnInit {
     this.itemsForm = this.fb.group({
       date:[''],
       itemName:[''],
+      amount:[''],
       description:[''],
-    }); 
+    });
   }
 
   addItem(){
+   
 
   }
 
