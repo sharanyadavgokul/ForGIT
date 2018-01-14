@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, FormArray } from '@angular/forms';
 
 import { Items } from './items';
 import { ItemsListComponent } from './items-list/items-list.component';
@@ -12,6 +12,7 @@ import { ItemsListComponent } from './items-list/items-list.component';
 export class ItemsComponent implements OnInit {
   title= 'items component';
   itemsForm: FormGroup;
+  itemsDetails: Items [] = [];
 
 
   constructor( private fb: FormBuilder) { }
@@ -21,12 +22,13 @@ export class ItemsComponent implements OnInit {
       date:[''],
       itemName:[''],
       amount:[''],
-      description:[''],
+      description:['']
     });
   }
 
   addItem(){
-   
+   // (this.itemsForm.get('itemsForm') as FormArray).push();
+
 
   }
 
