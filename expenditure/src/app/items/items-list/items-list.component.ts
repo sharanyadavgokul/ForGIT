@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Items } from '../items';
+import {ItemsComponent}
 
 @Component({
   selector: 'app-items-list',

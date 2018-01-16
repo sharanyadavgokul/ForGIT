@@ -5,7 +5,7 @@
     </div>
     <div class="col-md-7">
         {{itemsForm.value| json}}
-        <form [formGroup]="itemsForm">
+        <form [formGroup]="itemsForm" (ngSubmit)="addItem()">
             <div class="form-group">
                 Date: <input class="form-control" formControlName="date" name="date" type="date"   placeholder="date">
             </div>

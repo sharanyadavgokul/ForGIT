@@ -12,23 +12,24 @@ import { ItemsListComponent } from './items-list/items-list.component';
 export class ItemsComponent implements OnInit {
   title= 'items component';
   itemsForm: FormGroup;
-  itemsDetails: Items [] = [];
-
+  
 
   constructor( private fb: FormBuilder) { }
 
   ngOnInit() {
     this.itemsForm = this.fb.group({
-      date:[''],
-      itemName:[''],
-      amount:[''],
-      description:['']
+      'date': new FormControl(null),
+      'itemName': new FormControl(null),
+      'amount': new FormControl(null),
+      'description': new FormControl(null)
     });
   }
 
   addItem(){
    // (this.itemsForm.get('itemsForm') as FormArray).push();
-
+    console.log(this.itemsForm);
+    const itemss = new FormControl(['']);
+    //this.itemsForm.get('this.itemsForm').('this.itemss');
 
   }
 
