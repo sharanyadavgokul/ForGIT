@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, FormArray } from '@angular/forms';
 
-import { Items } from './items';
+import { Items } from './items.model';
 import { ItemsListComponent } from './items-list/items-list.component';
 
 @Component({

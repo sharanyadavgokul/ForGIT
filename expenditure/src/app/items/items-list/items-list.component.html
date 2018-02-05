@@ -16,19 +16,8 @@
         
     </tr>
     <tbody>
-    <tr>
-        <td>12/12/2017 </td>
-        <td> Rice bag</td>
-        <td>   1000 </td>
-        <td>for month jan</td> 
-    </tr>  
-    <tr>
-        <td>12/12/2017 </td>
-        <td> oil packtes</td>
-        <td>   500 </td>
-        <td>for month jan</td> 
-    </tr>
-    <tr *ngFor = "let item of itemsForm">
+
+    <tr *ngFor = "let item of items">
         <td>{{item.date}} </td>
         <td>{{item.itemName}}</td>
         <td>{{item.amount}}</td>   
