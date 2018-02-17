@@ -8,6 +8,9 @@ import { BooksListComponent } from './books/books-list/books-list.component';
 import { BooksDetailComponent } from './books/books-detail/books-detail.component';
 import { BooksItemComponent } from './books/books-list/books-item/books-item.component';
 import { HeaderComponent } from './header/header.component';
+import { BooksEditComponent } from './books/books-edit/books-edit.component';
+import { AppRoutingModule } from './app-routing-module';
+import { AuthorsComponent } from './authors/authors.component';
 
 
 @NgModule({
@@ -17,10 +20,14 @@ import { HeaderComponent } from './header/header.component';
     BooksListComponent,
     BooksDetailComponent,
     BooksItemComponent,
-    HeaderComponent
+    HeaderComponent,
+    BooksEditComponent,
+    AuthorsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
