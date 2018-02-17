@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { BooksModel } from '../books.model';
 import { BooksService } from '../books.service';
 
@@ -9,15 +9,11 @@ import { BooksService } from '../books.service';
 })
 export class BooksListComponent implements OnInit {
    books: BooksModel[];
-   @Output() bookWasSelected = new EventEmitter<BooksModel>();
   constructor(private bkservice: BooksService) { }
 
   ngOnInit() {
     this.books = this.bkservice.getBooks();
   }
 
-  onBookSelected(books: BooksModel) {
-    this.bookWasSelected.emit(books);
-  }
 
 }

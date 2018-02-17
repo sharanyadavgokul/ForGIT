@@ -1,6 +1,8 @@
 import {BooksModel} from './books.model';
+import { EventEmitter } from '@angular/core';
 
 export class BooksService {
+    bookSelected= new EventEmitter<BooksModel>();
     books: BooksModel[] = [
         new BooksModel(1, 'Half Girl friend', 'Chetan bhagat', '../assets/half.jpg', '21hgfv2j2'),
         new BooksModel(2, 'Jurrasic park', 'Steve', '../assets/jurassic.jpg', '31hgfv2j2'),

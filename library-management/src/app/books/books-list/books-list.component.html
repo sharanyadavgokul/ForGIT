@@ -6,10 +6,11 @@
 <hr>
 <div class="row">
   <div class="col-xs-12">
+    <h3><i><b>List of books... </b></i></h3>
+    <hr>
       <app-books-item 
       *ngFor="let bookEl of books"
       [book]="bookEl"
-      (bookSelected)="onBookSelected(bookEl)"
       ></app-books-item>
   </div>
 </div>

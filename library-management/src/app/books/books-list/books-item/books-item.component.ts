@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { BooksModel } from '../../books.model';
+import { BooksService } from '../../books.service';
 
 @Component({
   selector: 'app-books-item',
@@ -7,14 +8,14 @@ import { BooksModel } from '../../books.model';
   styleUrls: ['./books-item.component.css']
 })
 export class BooksItemComponent implements OnInit {
-  @Input() book: BooksModel[];
-  @Output() bookSelected = new EventEmitter<void>();
-  constructor() { }
+  @Input() book: BooksModel;
+  constructor(private bkService: BooksService) { }
 
   ngOnInit() {
   }
+
  onSelected() {
-  this.bookSelected.emit();
+  this.bkService.bookSelected.emit(this.book);
 }
 
 

@@ -10,9 +10,15 @@ import { BooksModel } from './books.model';
 })
 export class BooksComponent implements OnInit {
 selectedBook: BooksModel;
-  constructor() { }
+  constructor(private bkService: BooksService) { }
 
   ngOnInit() {
-  }
+    this.bkService.bookSelected
+    .subscribe(
+      (book: BooksModel) => {
+        this.selectedBook = book;
+      }
+  );
+}
 
 }
