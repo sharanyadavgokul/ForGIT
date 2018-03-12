@@ -9,6 +9,7 @@ import { BooksService } from '../../books.service';
 })
 export class BooksItemComponent implements OnInit {
   @Input() book: BooksModel;
+  @Input() index: Number;
   constructor(private bkService: BooksService) { }
 
   ngOnInit() {

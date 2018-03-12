@@ -22,7 +22,8 @@ import { AuthorsComponent } from './authors/authors.component';
     BooksItemComponent,
     HeaderComponent,
     BooksEditComponent,
-    AuthorsComponent
+    AuthorsComponent,
+
   ],
   imports: [
     BrowserModule,
