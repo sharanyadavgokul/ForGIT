@@ -1,19 +1,24 @@
 <div style="text-align:center">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <label for="image">Image</label>
+        <!--<div class="col-md-4">
+        </div>-->
+        <div class="col-md-12" id="login"> 
           <br>
-          <img src="assets/avatar.jpg" alt="imageDemo">
-          <form class="form-group">
+          <label for="image"><b>LOGIN PAGE</b></label>
+          <br>
+          <img src="assets/avatar.jpg" alt="imageDemo" class="img-responsive">
+          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
               <br>
-            <label for="loginid">Login ID</label>
-            <input type="text" class="form-control" id="loginid" placeholder="Enter loginId" required>
-            <label for="password"> Password </label>
-            <input type="password" class="form-control" id="passwd" placeholder="Enter password">
-            <label><input type="checkbox" checked="checked" class="pull left">Remember</label>
+            <label for="loginid"><b>Login ID</b></label>
+            <input type="text" formControlName="loginid" class="form-control" id="loginid" placeholder="Enter loginId" required>
+            <label for="password"><b>Password </b></label>
+            <input type="password" formControlName="password" class="form-control" id="passwd" placeholder="Enter password">
+            <label><input type="checkbox" checked="checked" class="pull-left">Remember</label>
           </form>
-          <button class="btn btn-primary"> Submit </button>
+          <button class="btn btn-primary" type="submit" (click)="onSubmit()"> Submit </button>
         </div>
+        <!--<div class="col-md-4">
+        </div>-->
       </div>
     </div>

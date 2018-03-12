@@ -7,6 +7,7 @@ import { PostloginModule } from './postlogin/home/postlogin.module';
 import { PreloginModule } from './prelogin/login/prelogin.module';
 import { HomeComponent } from './postlogin/home/home.component';
 import { LoginComponent } from './prelogin/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -19,7 +20,8 @@ import { LoginComponent } from './prelogin/login/login.component';
   imports: [
     BrowserModule,
     PostloginModule,
-    PreloginModule
+    PreloginModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
