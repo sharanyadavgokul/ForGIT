@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   }
   onSubmit(){
     console.log(this.loginForm.value);
-    sessionStorage.setItem('loginid')
+    sessionStorage.setItem('loginid', this.loginForm.value.loginid)
+    sessionStorage.setItem('password', this.loginForm.value.password)
   }
 }
