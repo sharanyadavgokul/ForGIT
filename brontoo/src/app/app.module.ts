@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { PostloginModule } from './postlogin/home/postlogin.module';
+import { PreloginModule } from './prelogin/login/prelogin.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    PostloginModule,
+    PreloginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
