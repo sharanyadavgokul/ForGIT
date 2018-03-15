@@ -3,7 +3,7 @@
       <div class="row">
         <!--<div class="col-md-4">
         </div>-->
-        <div class="col-md-12" id="login"> 
+        <div class="col-md-12" id="login" [hidden]=loginPage> 
           <br>
           <label for="image"><b>LOGIN PAGE</b></label>
           <br>
@@ -12,13 +12,35 @@
               <br>
             <label for="loginid"><b>Login ID</b></label>
             <input type="text" formControlName="loginid" class="form-control" id="loginid" placeholder="Enter loginId" required>
-            <label for="password"><b>Password </b></label>
+            <label for="password"><b> Password </b></label>
             <input type="password" formControlName="password" class="form-control" id="passwd" placeholder="Enter password">
             <label><input type="checkbox" checked="checked" class="pull-left">Remember</label>
           </form>
           <button class="btn btn-primary" type="submit" (click)="onSubmit()"> Submit </button>
+          <a href='javascript:void(0)' (click)= 'loginPage= true'>Register </a>
         </div>
-        <!--<div class="col-md-4">
-        </div>-->
+        
+    
+      </div>
+      <div class="row" [hidden]=!loginPage>
+          <!--<div class="col-md-4">
+          </div>-->
+          <div class="col-md-12" id="register"  > 
+            <br>
+            <label for="image"><b>Register PAGE</b></label>
+            <br>
+            <img src="assets/avatar.jpg" alt="imageDemo" class="img-responsive">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <br>
+              <label for="loginid"><b>Login ID</b></label>
+              <input type="text" formControlName="loginid" class="form-control" id="loginid" placeholder="Enter loginId" required>
+              <label for="password"><b> Password </b></label>
+              <input type="password" formControlName="password" class="form-control" id="passwd" placeholder="Enter password">
+              <label><input type="checkbox" checked="checked" class="pull-left">Remember</label>
+            </form>
+            <button class="btn btn-primary" type="submit" (click)="onRegister()"> Submit </button>
+          </div>
+    
       </div>
     </div>
+</div>   
