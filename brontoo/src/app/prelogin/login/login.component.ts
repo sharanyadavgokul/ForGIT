@@ -2,11 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 
-/* interface loginDetails{
-  email:string;
-  password:string
-} */
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,12 +19,12 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     this.loginForm= new FormGroup({
       'loginid': new FormControl(null, [Validators.required, Validators.email]),
-      'password': new FormControl(null),
+      'password': new FormControl(null, [Validators.required]),
     });
 
     this.registerForm= new FormGroup({
       'loginid': new FormControl(null, [Validators.required, Validators.email]),
-      'password': new FormControl(null),
+      'password': new FormControl(null, [Validators.required]),
     });
   }
 
@@ -57,10 +52,6 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home']);
       }
     }
-    /* if(localStorage.getItem('loginid') === this.loginForm.value.loginid && 
-    localStorage.getItem('password') === this.loginForm.value.password){
-    this.router.navigate(['/home']);
-    } */
   }
 
   onRegister(){
