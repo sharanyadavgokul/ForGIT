@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-md-12">
+    <h5><b>Please provide the details below:</b></h5><br>
+    <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <!--1st Coloumn-->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label><b>Student Name:</b> </label>
+            <input type="text" class="form-control" name="studentName" formControlName="studentName" 
+            placeholder="student name..">
+          </div>
+
+          <div class="form-group">
+            <label><b> Father's Name: </b></label>
+            <input type="text" class="form-control" name="fatherName" formControlName="fatherName" 
+            placeholder="father name..">
+          </div>
+
+          <div class="form-group">
+            <label><b> Gender: </b></label>
+            <input type="text" class="form-control" name="gender" formControlName="gender" 
+            placeholder="gender..">
+          </div>
+
+          <div class="form-group">
+            <label><b> DateOfBirth: </b></label>
+            <input type="Date" class="form-control" name="dob" formControlName="dob" 
+            placeholder="dob..">
+          </div>
+
+          <div class="form-group">
+            <label><b> Mobile: </b></label>
+            <input type="number" class="form-control" name="mobile" formControlName="mobile" 
+            placeholder="mobile..">
+          </div>
+
+          <div class="form-group">
+            <label><b> Email: </b></label>
+            <input type="email" class="form-control" name="email" formControlName="email" 
+            placeholder="email..">
+          </div>
+
+        </div><!--1st col-6-->
+
+        <!--2nd Coloumn-->
+        <div class="col-md-6">
+          <div formGroupName="address">
+            <div class="form-group">
+              <label><b> Address: </b></label>
+              <input type="text" class="form-control" name="address1" formControlName="address1" 
+              placeholder="address..">
+            </div>
+
+            <div class="form-group">
+              <label><b> City: </b></label>
+              <input type="text" class="form-control" name="city" formControlName="city" 
+              placeholder="city..">
+            </div>
+
+            <div class="form-group">
+              <label><b> District: </b></label>
+              <input type="text" class="form-control" name="district" formControlName="district" 
+              placeholder="district..">
+            </div>
+
+            <div class="form-group">
+              <label><b> State: </b></label>
+              <input type="text" class="form-control" name="state" formControlName="state" 
+              placeholder="state..">
+            </div>
+
+            <div class="form-group">
+              <label><b> PINCODE: </b></label>
+              <input type="text" class="form-control" name="pincode" formControlName="pincode" 
+              placeholder="pincode..">
+            </div>
+
+          </div> <!--address group-->
+
+          <div formGroupName="education"> 
+            <div class="form-group">
+              <label><b> Education Level: </b></label>
+              <input type="text" class="form-control" name="pincode" formControlName="educationLevel" 
+              placeholder="education level..">
+            </div>
+        
+            <div class="form-group">
+              <label><b> Highest Degree: </b></label>
+              <input type="text" class="form-control" name="pincode" formControlName="highestDegree" 
+              placeholder="highest degree..">
+            </div>
+          </div> <!--education group -->
+
+        </div><!--2st col-6-->
+
+      </div><!--row--> 
+      <button class="btn btn-success" type="submit" [disabled]="!studentForm.valid" >Submit form</button>
+    </form>
+  </div>  
+</div>
+

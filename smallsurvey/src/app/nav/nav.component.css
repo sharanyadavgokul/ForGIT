@@ -1,0 +1,5 @@
+#navy{
+    position:fixed;
+    z-index:99999;
+    overflow:hidden;
+}

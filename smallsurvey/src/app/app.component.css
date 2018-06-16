@@ -1,0 +1,10 @@
+
+#backg{
+    /* background-color: lightcyan; */
+    height:1750px ; 
+    width: 100%;
+    font-family:Palatino Linotype;
+    background-image:url('../assets/back.jpg');
+    background-size:100% 100%;
+}
+

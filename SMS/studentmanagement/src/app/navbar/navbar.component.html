@@ -1,0 +1,67 @@
+<div class="container-fluid justify-content-between">
+    <div class="row">
+      <div class="col-md-12" id="sas">
+         <br>
+        <div class="row" >
+          <div class="col-md-8">
+            <h2><i>School Administration System</i></h2>
+          </div>
+          <div class="col-md-4">
+            <h2> Company name</h2>
+          </div>
+        </div>
+      </div>
+    </div><!-- end of 1st row-->
+    <hr>
+      <div class="container" id="col2">
+        <div class="row justify-content-between">
+          <p><b><i>Welcome to the School Management Application. 
+            We wish you all the best in your academics 
+            and for your future goals. </i></b></p>
+          <!-- <marquee>Welcome to the School Management Application. 
+            We wish you all the best in your academics and for your future goals.</marquee> -->
+        </div>
+        <div class="row justify-content-end">
+          <h4>Hello, Guest! &nbsp;</h4>
+          <button class="btn-xs btn-danger">LogOut</button>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+              <div class="col-md-2">
+                  <div class="row justify-content-start" id="menu">
+                    <h6><i>Hello, Guest! &nbsp; Please select from content..</i></h6>
+                    <div class="vertical-menu">
+                        <a routerLink="/student" routerLinkActive="active"><b>Student</b> 
+                          <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                        <a routerLink="/class-timetable" routerLinkActive="active"><b>Teacher</b></a>
+                        <a routerLink="/parents" routerLinkActive="active"><b>Parents</b></a>
+                        <a routerLink="/admin" routerLinkActive="active"><b>Admin</b></a>
+                        <a routerLink="/developer" routerLinkActive="active"><b>Developer</b></a>
+                        <a routerLink="/admission" routerLinkActive="active"><b>Admissions</b></a>
+                        <a routerLink="/library" routerLinkActive="active"><b>Library</b></a>
+                        <a routerLink="/notice" routerLinkActive="active"><b>Notice Board</b></a>
+                        <a routerLink="/fees" routerLinkActive="active"><b>Fees</b></a>
+                        <a routerLink="/gallery" routerLinkActive="active"><b>Gallery</b></a>
+                        <a routerLink="/aboutus" routerLinkActive="active"><b>Email</b></a>
+                        <div class="row justify-content-end">
+                          <p>- Thank you &nbsp;&nbsp;&nbsp;</p>
+                        </div>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                    <router-outlet></router-outlet>
+                </div>
+          </div>
+        </div>
+      </div>
+  
+  
+  
+  
+</div><!--container -->

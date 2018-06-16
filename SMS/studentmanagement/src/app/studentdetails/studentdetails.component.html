@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-dark">
+    <form class="form-inline">
+      <h4 style="color:navy;">Please search with the student name..&nbsp;&nbsp;</h4>
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" >
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </nav>
+<br>
+<div class="conatiner">
+  <div class="row">
+    <div class="col-md-12">
+        <ul class="nav nav-tabs">
+            <li class="nav-item" *ngFor="let button of btn let i=index">
+              <a class="nav-link " (click)="onSubmit(i)" >Class {{btn[i]}}</a>
+            </li>
+          </ul>
+      <br>
+      <table class="table table-striped full-data-table">
+        <tr>  
+          <th>Name</th>
+          <th>Student ID</th>
+          <th>Class</th>
+          <th> DateOfBirth</th>
+          <th>Sex</th>
+          <th>More Details</th>
+        </tr>
+        <tr *ngFor= "let stud of studentDetails let i=index">
+          <td>{{stud.name}}</td>
+          <td>{{stud.studentId}}</td>
+          <td>{{stud._class}}</td>
+          <td>{{stud.dob | date: "shortDate"}}</td>
+          <td>{{stud.sex}}</td>
+          <td><a routerLink="/stud-info" (click)="onSelected(i)">More Details</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

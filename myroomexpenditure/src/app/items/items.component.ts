@@ -12,7 +12,6 @@ import { ItemsListComponent } from './items-list/items-list.component';
 export class ItemsComponent implements OnInit {
   title= 'items component';
   itemsForm: FormGroup;
-  
 
   constructor( private fb: FormBuilder) { }
 

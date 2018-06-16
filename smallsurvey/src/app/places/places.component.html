@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-12">
+    <h2 style="color:white; background-color: Black"><i>Please checkout the below list of Resorts and vote accordingly in voting section: </i></h2>
+    <p> Thank you:) have a wonderful day.</p>
+    
+      
+    <div class="row"  >
+      <div class="col-md-6" *ngFor="let p of place">
+          <hr style="color:black">
+          <a href="{{p.web}}" target="_blank">
+            <img src="{{p.imagePath}}" alt="resort 1" width="450" height="200">
+            <h4 style="color:black"><b>{{p.name}}</b></h4>
+            <p style="color:black"> link: "{{p.web}}"</p>
+          </a>
+      </div>
+    </div>
+  </div>
+</div>

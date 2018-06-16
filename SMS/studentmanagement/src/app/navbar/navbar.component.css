@@ -1,0 +1,42 @@
+.vertical-menu {
+    width: 450px;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: navy;
+    color: white;
+}
+
+#sas{
+    background-color:navy;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 400px;
+    color:white;
+    /* background-image: url('/assets/back.jpg'); */
+    text-align: center;
+}
+
+#menu{
+background-color: #eee;
+margin-left: 1px;
+}
+
+#col2{
+    background-color:rgba(0, 0, 128, 0.596);
+    border-bottom-left-radius: 500px;
+    border-top-right-radius: 5pxpx;
+    /* background-image: url('/assets/back.jpg'); */
+    color:white;
+}

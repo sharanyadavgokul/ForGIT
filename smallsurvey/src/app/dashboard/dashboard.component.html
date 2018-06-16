@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <h1 style="background-color:black; color:white;">
+        {{title}}!
+      </h1>
+      
+      <div>
+        <canvas
+            baseChart
+            [chartType]="'bar'"
+            [(datasets)]="chartData"
+            [labels]="labels"
+            [options]="chartOptions"
+            [legend]="true"
+            [colors]="colors"
+            (chartClick)="onChartClick($event)">
+        </canvas>
+      </div>
+      <br>
+      <br>
+      <br>
+    </div>
+  </div>
+</div>

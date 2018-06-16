@@ -1,0 +1,39 @@
+<h1 style="text-align:center"> ** Class time table **</h1>
+<hr>
+<!-- <div class="row">
+  <div class="col-md-12" *ngFor="let button of btn let i=index">
+    <button class="btn btn-primary" (click)="onSubmit(i)">Class{{btn[i]}}</button>
+  </div>
+</div> -->
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav-item" *ngFor="let button of btn let i=index">
+      <a class="nav-link" (click)="onSubmit(i)" >Class {{btn[i]}}</a>
+    </li>
+  </ul>
+</div>
+
+<table class="table">
+  <tr style="color:white; background-color: navy;">
+    <th>Day&nbsp;|&nbsp;Time</th>
+    <th>8:30-9:30</th>
+    <th style="text-align:center">9:30-10:30</th>
+    <th>10:30-11:30</th>
+    <th>11:30-12:30</th>
+    <th>12:30-2:00</th>
+    <th>2:00-3:00</th>
+    <th>3:00-4:00</th>
+    <th>4:00-5:00</th> <!--9 total-->
+  </tr>
+  <tr style="text-align:center"  *ngFor="let tt of timetable let i=index;">
+    <td style="color:white; background-color: navy"><b><i>{{tt.day}}</i></b></td>
+    <td>{{tt.sub1}}</td>
+    <td>{{tt.sub2}}</td>
+    <td>{{tt.sub3}}</td>
+    <td>{{tt.sub4}}</td>
+    <td style=" color:white; background-color: navy"><b> LUNCH</b></td>
+    <td>{{tt.sub5}}</td>
+    <td>{{tt.sub6}}</td>
+    <td>{{tt.sub7}}</td><!--9 total-->
+  </tr>
+</table>
