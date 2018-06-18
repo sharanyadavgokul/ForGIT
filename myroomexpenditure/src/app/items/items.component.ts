@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { FormControl, FormGroup, FormBuilder, FormArray, Validators } from '@angular/forms';
 
-import { Items } from './items.model';
+import { Items } from '../models/items.model';
 import { ItemsListComponent } from './items-list/items-list.component';
+import { ItemsService } from '../services/items.service';
 
 @Component({
   selector: 'app-items',
@@ -12,24 +13,42 @@ import { ItemsListComponent } from './items-list/items-list.component';
 export class ItemsComponent implements OnInit {
   title= 'items component';
   itemsForm: FormGroup;
+  selectedShare:String;
+  selectedUsed:String;
 
-  constructor( private fb: FormBuilder) { }
+  constructor( private fb: FormBuilder, private itemsService:ItemsService) {  }
 
   ngOnInit() {
     this.itemsForm = this.fb.group({
-      'date': new FormControl(null),
-      'itemName': new FormControl(null),
-      'amount': new FormControl(null),
-      'description': new FormControl(null)
+      'date': new FormControl('', Validators.required),
+      'itemName': new FormControl('', Validators.required),
+      'amount': new FormControl('', Validators.required),
+      'description': new FormControl('', Validators.required),
+      'share':new FormControl('', Validators.required),
+      'used1':new FormControl('',),
+      'used2':new FormControl('',),
     });
   }
 
   addItem(){
-   // (this.itemsForm.get('itemsForm') as FormArray).push();
-    console.log(this.itemsForm);
-    const itemss = new FormControl(['']);
-    //this.itemsForm.get('this.itemsForm').('this.itemss');
-
+  console.log(this.itemsForm.value);
+  this.itemsService.items.push(this.itemsForm.value);
   }
+
+  onClear(){
+    this.itemsForm.reset();
+  }
+
+  onSelect(event){
+    this.selectedShare=event.target.value;
+    console.log(this.selectedShare);
+  }
+
+  onSelectUsed(event){
+    this.selectedUsed=event.target.value;
+    console.log(this.selectedUsed);
+  }
+
+
 
 }

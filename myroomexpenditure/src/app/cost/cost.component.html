@@ -1,0 +1,31 @@
+<h2>*** Cost to Individual ***</h2>
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-3">
+          <table class="table table-stripped">
+              <tr>
+                <th>SNo.</th>
+                <th>Gokul</th>
+              </tr>
+              <tr *ngFor="let itemGokul of amountGokul let i=index">
+                <td>{{i+1}}.</td>
+                <td>&#8377;&nbsp;<b>{{itemGokul}}</b>/-</td>
+              </tr>
+            </table>
+      </div>
+      <div class="col-md-3">
+          <table class="table table-stripped">
+              <tr>
+                  <th>SNo.</th>
+                <th>Revanth</th>
+              </tr>
+              <tr *ngFor="let itemRev of amountRev let i=index">
+                  <td>{{i+1}}.</td>
+                <td>&#8377;&nbsp;<b>{{itemRev}}</b>/-</td>
+              </tr>
+            </table>
+      </div>
+    </div>
+  </div>
+</div>

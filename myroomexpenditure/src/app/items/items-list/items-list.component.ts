@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Items } from '../items.model';
+import { Items } from '../../models/items.model';
 import { ItemsComponent } from '../items.component';
+import { ItemsService } from '../../services/items.service';
 
 @Component({
   selector: 'app-items-list',
@@ -10,13 +11,12 @@ import { ItemsComponent } from '../items.component';
 export class ItemsListComponent implements OnInit {
   title = 'items-list component';
   isVisible: Boolean = true;
-  items: Items[] = [
-    new Items(201, 'milk', 'to drink', 100),
-    new Items(202, 'rice', 'to eat', 2000 )
-  ];
-  constructor() { }
+  items:Items[];
+  
+  constructor( private itemsServie:ItemsService) { }
 
   ngOnInit() {
+  this.items= this.itemsServie.items;
   }
 
   toggleItems() {

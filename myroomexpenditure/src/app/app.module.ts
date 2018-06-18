@@ -4,24 +4,21 @@ import {Routes, RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ExpensesComponent } from './expenses/expenses.component';
-import { CostToPeopleComponent } from './expenses/cost-to-people/cost-to-people.component';
-import { TotalMonthExpComponent } from './expenses/cost-to-people/total-month-exp/total-month-exp.component';
-import { MoneySpentComponent } from './expenses/money-spent/money-spent.component';
-import { IndividualTotalSpentComponent } from './expenses/money-spent/individual-total-spent/individual-total-spent.component';
-import { ShouldPayComponent } from './expenses/should-pay/should-pay.component';
 import { ItemsComponent } from './items/items.component';
 import { ItemsListComponent } from './items/items-list/items-list.component';
-import { ItemsEditComponent } from './items/items-list/items-edit/items-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-
+import { ItemsService } from './services/items.service';
+import { CostComponent } from './cost/cost.component';
+import { MonthlyComponent } from './monthly/monthly.component';
+import { ShouldpayComponent } from './shouldpay/shouldpay.component';
  
 const appRoutes: Routes= [
   {path: '', component:HomeComponent},
   {path:'items', component:ItemsComponent},
-  {path:'expenses',component:ExpensesComponent},
-  {path:'shouldpay', component:ShouldPayComponent}
+  {path:'divided-amount',component:CostComponent},
+  {path:'monthly-exp',component:MonthlyComponent},
+  {path:'should-pay',component:ShouldpayComponent},
 
 ];
 
@@ -29,16 +26,12 @@ const appRoutes: Routes= [
   declarations: [
     AppComponent,
     HeaderComponent,
-    ExpensesComponent,
-    CostToPeopleComponent,
-    TotalMonthExpComponent,
-    MoneySpentComponent,
-    IndividualTotalSpentComponent,
-    ShouldPayComponent,
     ItemsComponent,
     ItemsListComponent,
-    ItemsEditComponent,
     HomeComponent,
+    CostComponent,
+    MonthlyComponent,
+    ShouldpayComponent,
     
   ],
   imports: [
@@ -47,7 +40,7 @@ const appRoutes: Routes= [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

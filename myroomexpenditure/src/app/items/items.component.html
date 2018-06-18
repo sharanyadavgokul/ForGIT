@@ -1,27 +1,61 @@
-<h2> {{title}} </h2>
+<h2 style="background-color: navy; color:white"><b><i>**Please add Items to the list below**</i></b></h2>
+<hr>
 <div class="row">
     <div class="col-md-5">
-        <app-items-list></app-items-list>
-    </div>
-    <div class="col-md-7">
-        {{itemsForm.value| json}}
+        <!-- {{itemsForm.value | json}} -->
         <form [formGroup]="itemsForm" (ngSubmit)="addItem()">
             <div class="form-group">
-                Date: <input class="form-control" formControlName="date" name="date" type="date"   placeholder="date">
+                <label><b>Date:</b></label> <input class="form-control" formControlName="date" name="date" type="date"   placeholder="date">
             </div>
             <div class="form-group">    
-                Item Name: <input class="form-control" formControlName="itemName" name="itemName" type="text"  placeholder="Item name">
+                <label><b>Item Name:</b></label> <input class="form-control" formControlName="itemName" name="itemName" type="text"  placeholder="Item name">
             </div> 
             <div class="form-group">
-                Amount: <input class="form-control" formControlName="amount" name="amount" type="number" placeholder="amount">
-            </div>    
-            <hr>
-            <div class="form-group">
-            Description: <input class="textarea" row="5" formControlName="description" name="description" type="textarea" placeholder="Description" style="width:100%;height:40px">
+                <label><b>Amount:</b></label> <input class="form-control" formControlName="amount" name="amount" type="number" placeholder="amount">
             </div>
-               
-        </form>   
-        <button type="button" class="btn btn-primary" (click)="addItem()">Add Item</button> 
-        <app-money-spent></app-money-spent>
+            <h3>Who Paid for Items?</h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                              <label> SHARAN:</label> <input type="radio" name="share" value="Gokul" (click)="onSelect($event)" formControlName="share">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label> REVANTH:</label> <input type="radio" name="share" value="Revanth" (click)="onSelect($event)" formControlName="share">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Who will use items? </h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label> GOKUL Share:</label> <input type="checkbox" name="used1" value="Gokul" (click)="onSelect($event)" formControlName="used1">
+                            </div>             
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label> REVANTH Share:</label> <input type="checkbox" name="used2" value="Revanth" (click)="onSelect($event)" formControlName="used2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><b>Description:</b></label><textarea rows="3" col="0" class="form-control" formControlName="description"></textarea>
+            </div>
+            <button type="button" class="btn btn-success" (click)="addItem()">Add Item</button> 
+            <button type="button" class="btn btn-danger" (click)="onClear()">Clear </button>
+        </form >   
+    </div>
+    <div class="col-md-7">
+        <app-items-list></app-items-list>
     </div>
 </div>

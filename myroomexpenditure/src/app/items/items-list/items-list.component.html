@@ -1,27 +1,34 @@
-<h5> {{title}} </h5>
-<!--<div class="row">
-    <div class="col-md-6">
-        <app-items-edit></app-items-edit>
-    </div>
-</div>-->
+
 <h3>Items List Table</h3>
-<button type="button" class="btn btn-primary" (click)="toggleItems()">Hide/Show List</button>
+<button type="button" class="btn btn-warning" (click)="toggleItems()">Hide/Show List</button><br>
 <br>
-<table class="table" *ngIf="isVisible">
-    <tr>
+<table class="table table-striped" *ngIf="isVisible">
+    <tr style="background-color:navy; color:white">
         <th>Date</th>
         <th>Items-Name</th>
         <th>Amount </th>
         <th>Description</th>
-        
+        <th>Money given by</th>  
+        <th colspan="2">ITEM will be Used by:</th>
     </tr>
+        <tr style="background-color:navy; color:white">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>   
+        <th>Gokul</th>
+        <th>Revanth</th>
+        </tr>       
     <tbody>
-
     <tr *ngFor = "let item of items">
-        <td>{{item.date}} </td>
+        <td>{{item.date | date: "dd/mm/yyyy"}} </td>
         <td>{{item.itemName}}</td>
-        <td>{{item.amount}}</td>   
+        <td>&#8377;&nbsp;{{item.amount}}</td>   
         <td>{{item.description}}</td> 
+        <td>{{item.share}}</td>
+        <td [ngStyle]="{'color': item.used1 === !'false' ? 'green' : 'red'}">{{item.used1}}</td>
+        <td [ngStyle]="{'color': item.used2 === !'true' ? 'green' : 'red'}">{{item.used2}}</td>
     </tr>
     </tbody> 
 </table>
