@@ -10,11 +10,13 @@ import { ItemsService } from '../services/items.service';
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.css']
 })
+
 export class ItemsComponent implements OnInit {
   title= 'items component';
   itemsForm: FormGroup;
   selectedShare:String;
   selectedUsed:String;
+
 
   constructor( private fb: FormBuilder, private itemsService:ItemsService) {  }
 
@@ -25,18 +27,21 @@ export class ItemsComponent implements OnInit {
       'amount': new FormControl('', Validators.required),
       'description': new FormControl('', Validators.required),
       'share':new FormControl('', Validators.required),
-      'used1':new FormControl('',),
-      'used2':new FormControl('',),
+      'used1':new FormControl(true,Validators.required),
+      'used2':new FormControl(true,Validators.required)
     });
   }
 
   addItem(){
   console.log(this.itemsForm.value);
+  // this.itemsService.localD.push(this.itemsForm.value);
   this.itemsService.items.push(this.itemsForm.value);
+  this.ngOnInit();
+  this.itemsService.toLocal();
   }
 
   onClear(){
-    this.itemsForm.reset();
+    this.ngOnInit();
   }
 
   onSelect(event){
@@ -50,5 +55,9 @@ export class ItemsComponent implements OnInit {
   }
 
 
-
 }
+
+
+
+
+

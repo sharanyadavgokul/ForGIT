@@ -11,15 +11,12 @@ import { HomeComponent } from './home/home.component';
 import { ItemsService } from './services/items.service';
 import { CostComponent } from './cost/cost.component';
 import { MonthlyComponent } from './monthly/monthly.component';
-import { ShouldpayComponent } from './shouldpay/shouldpay.component';
  
 const appRoutes: Routes= [
   {path: '', component:HomeComponent},
   {path:'items', component:ItemsComponent},
   {path:'divided-amount',component:CostComponent},
   {path:'monthly-exp',component:MonthlyComponent},
-  {path:'should-pay',component:ShouldpayComponent},
-
 ];
 
 @NgModule({
@@ -30,9 +27,7 @@ const appRoutes: Routes= [
     ItemsListComponent,
     HomeComponent,
     CostComponent,
-    MonthlyComponent,
-    ShouldpayComponent,
-    
+    MonthlyComponent,    
   ],
   imports: [
     BrowserModule,

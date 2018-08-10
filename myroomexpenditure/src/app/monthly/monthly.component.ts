@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ItemsService } from '../services/items.service';
 
 @Component({
@@ -8,20 +8,16 @@ import { ItemsService } from '../services/items.service';
 })
 
 export class MonthlyComponent implements OnInit {
-  summ:number;
+  totalSumGokul:Array<number>=[];
+  totalSumRevanth:Array<number>=[];
   constructor(private itemService:ItemsService) { }
 
   ngOnInit() {
-    this.sum();
-    // console.log(this.summ);
-  }
+    this.itemService.addGokul();
+    this.totalSumGokul=this.itemService.totalGokul;
 
-  sum(){
-    var i, total;
-    for (i=0;i<=this.itemService.amountDivGokul.length;i++){
-      total=this.itemService.amountDivGokul[i]+total;
-      console.log(this.itemService.amountDivGokul[i]);  
-      console.log(total);
-    }
+    this.itemService.addRevanth();
+    this.totalSumRevanth=this.itemService.totalRevanth;
   }
+  
 }

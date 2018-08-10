@@ -37,12 +37,16 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label> GOKUL Share:</label> <input type="checkbox" name="used1" value="Gokul" (click)="onSelect($event)" formControlName="used1">
+                                <label> GOKUL Share:</label> 
+                                <input type="checkbox"  name="used1" value="Gokul" (click)="onSelect($event)" 
+                                formControlName="used1" >
                             </div>             
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label> REVANTH Share:</label> <input type="checkbox" name="used2" value="Revanth" (click)="onSelect($event)" formControlName="used2">
+                                <label> REVANTH Share:</label> 
+                                <input type="checkbox"  name="used2" value="Revanth"  (click)="onSelect($event)" 
+                                formControlName="used2" >
                             </div>
                         </div>
                     </div>
@@ -51,7 +55,7 @@
             <div class="form-group">
                 <label><b>Description:</b></label><textarea rows="3" col="0" class="form-control" formControlName="description"></textarea>
             </div>
-            <button type="button" class="btn btn-success" (click)="addItem()">Add Item</button> 
+            <button type="button" class="btn btn-success" [hidden]='itemsForm.invalid' (click)="addItem()">Add Item</button> 
             <button type="button" class="btn btn-danger" (click)="onClear()">Clear </button>
         </form >   
     </div>

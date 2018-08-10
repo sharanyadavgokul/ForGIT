@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Items } from '../../models/items.model';
 import { ItemsComponent } from '../items.component';
 import { ItemsService } from '../../services/items.service';
@@ -8,7 +8,7 @@ import { ItemsService } from '../../services/items.service';
   templateUrl: './items-list.component.html',
   styleUrls: ['./items-list.component.css']
 })
-export class ItemsListComponent implements OnInit {
+export class ItemsListComponent implements OnInit, OnChanges {
   title = 'items-list component';
   isVisible: Boolean = true;
   items:Items[];
@@ -23,4 +23,7 @@ export class ItemsListComponent implements OnInit {
     this.isVisible = !this.isVisible;
   }
 
+  ngOnChanges(changes:SimpleChanges){
+    console.log("changes="+changes);
+  }
 }
